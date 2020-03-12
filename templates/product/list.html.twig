@@ -1,0 +1,17 @@
+{# templates/lucky/number.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    
+    {% for item in array %}
+    <h1>Producto guardado</h1>
+    <p>ID: {{ item.getId() }}</p>
+    <p>Nombre: {{ item.getName() }}</p>
+    <p>Precio: {{ item.getPrice() }}</p>
+    <p>Descripción: {{ item.getDescription() }}</p>
+    {% endfor %} 
+    
+    <button>
+    <a href="/product">VOLVER</a>
+    </button>
+{% endblock %}

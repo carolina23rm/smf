@@ -1,0 +1,20 @@
+{# templates/lucky/number.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <form method="POST" name="formulario" id="formulario" action="/product/edit/{{ idProducto }}"> 
+        <h2>ID</h2>
+        <input type="int" id="id" name="id"   value="{{ idProducto }}" disabled>
+        <h2>Nombre del producto</h2>  
+        <input type="text" id="producto" name="producto"  value="{{ nombreP }}">
+        <h2>Precio</h2>
+        <input type="int" id="precio" name="precio"  value="{{ precioP }}">
+        <h2>Descripcion</h2>
+        <input type="text" id="descrip" name="descrip" value="{{ desP }}">
+        <button type="submit" >GUARDAR CAMBIOS</button>
+    </form>
+   
+    <button>
+    <a href="/product">VOLVER</a>
+    </button>
+{% endblock %}

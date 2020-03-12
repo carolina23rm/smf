@@ -1,0 +1,24 @@
+{# templates/lucky/number.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Producto guardado</h1>
+    <p>ID: {{ idProducto }}</p>
+    <p>Nombre: {{ nombreP }}</p>
+    <p>Precio: {{ precioP }}</p>
+    <p>Descripción: {{ desP }}</p>
+    
+    <button>
+    <a href="/product/Formedit/{{ idProducto }}">EDITAR</a>
+    </button>
+   
+    <button>
+    <a href="/product/delete/{{ idProducto }}">ELIMINAR</a>
+    </button>
+    
+    
+    <button>
+    <a href="/product">VOLVER</a>
+    </button>
+{% endblock %}
+

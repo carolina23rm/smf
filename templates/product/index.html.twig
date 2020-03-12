@@ -1,0 +1,56 @@
+{# templates/lucky/number.html.twig #}
+{% extends 'base.html.twig' %}
+
+    
+{% block body %}
+<body class="">
+    <div class="container text-center">
+        <div class="row">
+            
+            <div class="col-md-8 order-md-1 mt-5">
+                <h1 class='blog-post-title'>Añadir un nuevo producto</h1>
+                <form method="POST" name="formulario" id="formulario" action="/product/add"> 
+                    
+                    <div class='bg-dark text-white p-5 m-3'>
+                    <h2>Nombre del producto</h2>  
+                    <input type="text" id="producto" name="producto" required class="form-control mt-2">  
+                    </div>
+                    
+
+                    
+                    <div class='bg-light text-dark p-5 m-3'>
+                    <h2>Precio</h2>
+                    <input type="int" id="precio" name="precio" required class="form-control">  
+                    </div>                    
+                    
+                    <div class='bg-dark text-white p-5 m-3'>
+                    <h2>Descripcion</h2>
+                    <input type="text" id="descrip" name="descrip" required class="form-control">  
+                    </div>
+                    
+ 
+                    <hr class='mb-4'>
+                    <button type="submit" class="btn btn-outline-secondary btn-lg btn-block">ENVIAR</button>
+                </form>
+            </div>
+
+            <div class="col-md-4 order-md-2 mt-5">
+                <div class="bg-primary text-white p-5">
+                    <h1>Buscar un producto guardado</h1>
+                    <form method="POST" name="buscar" id="buscar" action="/product/{id}">
+                    <input type="int" id="id" name="id" placeholder="Introduzca el id del producto" class="form-control">
+                    <hr class='mb-4'>
+                    <button type="submit" class="btn btn-secondary btn-block">BUSCAR</button>
+                    </form>
+                </div>
+            <div class="p-5">
+                <h1>Lista de productos guardados</h1>
+                <hr class='mb-4'>
+                <a href="/list" class="btn btn-primary btn-lg btn-block">LISTA</a>
+                
+            </div>
+        </div>
+    </div>
+</body>
+   
+{% endblock %}
